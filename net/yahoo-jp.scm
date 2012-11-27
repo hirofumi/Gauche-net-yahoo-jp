@@ -1,4 +1,4 @@
-(define-module net.yahoo
+(define-module net.yahoo-jp
   (use gauche.parameter)
   (use rfc.http)
   (use rfc.uri)
@@ -14,7 +14,7 @@
     (with-module gauche.sequence map-with-index))
   (export yj-application-id <yj-api-error> yj-api-error?))
 
-(select-module net.yahoo)
+(select-module net.yahoo-jp)
 
 (define yj-application-id
   (make-parameter "YahooDemo"))
@@ -181,4 +181,4 @@
  ("station.music.yahooapis.jp" GET
   /StationWebService/V1/ProgramList))
 
-(provide "net.yahoo")
+(provide "net.yahoo-jp")
